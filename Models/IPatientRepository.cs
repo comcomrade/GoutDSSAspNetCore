@@ -5,7 +5,9 @@ using System.Threading.Tasks;
 
 namespace GoutDSSAspNetCore.Models
 {
-    interface IPatientRepository
+    public interface IPatientRepository
     {
+        IEnumerable<Patient> GetAllPatient { get; }
+        Patient GetPatientById(int patientId);
     }
 }
